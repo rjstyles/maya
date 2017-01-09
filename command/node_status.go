@@ -583,7 +583,7 @@ func getHostResources(hostStats *api.HostStats, node *api.Node) ([]string, error
 		)
 	} else {
 		// If non-physical device are used, output device name only,
-		// since nomad doesn't collect the stats data.
+		// since it doesn't collect the stats data.
 		resources[1] = fmt.Sprintf("%v/%v MHz|%v/%v|(%s)",
 			math.Floor(hostStats.CPUTicksConsumed),
 			node.Resources.CPU,

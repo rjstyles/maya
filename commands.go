@@ -60,6 +60,11 @@ func Commands(metaPtr *command.Meta) map[string]cli.CommandFactory {
 				M: meta,
 			}, nil
 		},
+		"vsm-stop": func() (cli.Command, error) {
+			return &command.VsmStopCommand{
+				Meta: meta,
+			}, nil
+		},
 		"version": func() (cli.Command, error) {
 			ver := Version
 			rel := VersionPrerelease
