@@ -2,6 +2,7 @@ package: github.com/openebs/maya
 import:
 - package: github.com/dustin/go-humanize
 - package: github.com/hashicorp/go-getter
+- package: github.com/hashicorp/nomad
   subpackages:
   - api
   - jobspec
