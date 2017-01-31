@@ -1,5 +1,5 @@
-hash: edc59a9475fc1e482a202f0866698038436db5560ee767635df33bf7b35a32dd
-updated: 2017-01-10T15:59:57.213922744+05:30
+hash: 1f650f629b3c28310abac2527cbae32e39009868583d550f0eba8e3b4971c444
+updated: 2017-01-31T13:38:12.080950729+05:30
 imports:
 - name: github.com/armon/circbuf
   version: bbbad097214e2918d8543d5201d12bfd7bca254d
@@ -44,7 +44,7 @@ imports:
 - name: github.com/bgentry/speakeasy
   version: 675b82c74c0ed12283ee81ba8a534c8982c07b85
 - name: github.com/docker/docker
-  version: 43cc971d7694bc05c3c8b9641364f0a4e3775817
+  version: 49bf474f9ed7ce7143a59d1964ff7b7fd9b52178
   subpackages:
   - api/types
   - api/types/blkiodev
@@ -56,6 +56,7 @@ imports:
   - api/types/strslice
   - api/types/swarm
   - api/types/versions
+  - cli
   - contrib
   - opts
   - pkg
@@ -158,6 +159,7 @@ imports:
   - nomad/structs
   - nomad/structs/config
   - nomad/types
+  - testutil
 - name: github.com/hashicorp/serf
   version: d3a67ab21bc8a4643fa53a3633f2d951dd50c6ca
   subpackages:
