@@ -2,7 +2,7 @@
 
 set -e
 
-NOMAD_VERSION="0.5.0"
+NOMAD_VERSION="0.5.2"
 CURDIR=`pwd`
 
 # Remove if already present
