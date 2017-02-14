@@ -18,10 +18,6 @@ Usage: maya vsm-stop [options] <vsm>
   an interactive monitor session will start to display log lines as
   the job unwinds its allocations and completes shutting down.
 
-General Options:
-
-  ` + generalOptionsUsage() + `
-
 Stop Options:
 
   -detach
