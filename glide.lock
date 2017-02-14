@@ -44,11 +44,7 @@ imports:
 - name: github.com/bgentry/speakeasy
   version: 675b82c74c0ed12283ee81ba8a534c8982c07b85
 - name: github.com/docker/docker
-<<<<<<< HEAD
   version: 49bf474f9ed7ce7143a59d1964ff7b7fd9b52178
-=======
-  version: 43cc971d7694bc05c3c8b9641364f0a4e3775817
->>>>>>> da07b7f... Update glide.yaml
   subpackages:
   - api/types
   - api/types/blkiodev
@@ -60,10 +56,7 @@ imports:
   - api/types/strslice
   - api/types/swarm
   - api/types/versions
-<<<<<<< HEAD
   - cli
-=======
->>>>>>> da07b7f... Update glide.yaml
   - contrib
   - opts
   - pkg
@@ -166,10 +159,7 @@ imports:
   - nomad/structs
   - nomad/structs/config
   - nomad/types
-<<<<<<< HEAD
   - testutil
-=======
->>>>>>> da07b7f... Update glide.yaml
 - name: github.com/hashicorp/serf
   version: d3a67ab21bc8a4643fa53a3633f2d951dd50c6ca
   subpackages:
