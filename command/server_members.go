@@ -3,6 +3,7 @@ package command
 import (
 	"fmt"
 	"net"
+	"os/exec"
 	"sort"
 	"strings"
 
@@ -12,6 +13,7 @@ import (
 
 type ServerMembersCommand struct {
 	Meta
+	Cmd *exec.Cmd
 }
 
 func (c *ServerMembersCommand) Help() string {
@@ -96,6 +98,10 @@ func (c *ServerMembersCommand) Run(args []string) int {
 
 	// Dump the list
 	c.Ui.Output(columnize.SimpleFormat(out))
+	var runop int
+	if runop = c.mserverstatus(); runop != 0 {
+		return runop
+	}
 	return 0
 }
 
@@ -178,4 +184,19 @@ func regionLeaders(client *api.Client, mem []*api.AgentMember) (map[string]strin
 	}
 
 	return leaders, nil
+}
+
+// to get the status of mayaserver deamon,
+// TODO proper CLI command once mayaserver have it's own
+func (c *ServerMembersCommand) mserverstatus() int {
+	var runop int = 0
+
+	c.Cmd = exec.Command("systemctl", "status", "mayaserver")
+
+	if runop := execute(c.Cmd, c.Ui); runop != 0 {
+		c.Ui.Error("mayaserver not running")
+	}
+
+	return runop
+
 }

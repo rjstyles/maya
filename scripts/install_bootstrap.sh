@@ -29,6 +29,10 @@ curl -sSL https://raw.githubusercontent.com/openebs/maya/master/scripts/get_firs
 echo "Fetching docker scripts ..."
 curl -sSL https://raw.githubusercontent.com/openebs/maya/master/scripts/install_docker.sh -o install_docker.sh
 
+echo "Fetching Mayaserver scripts ..."
+curl -sSL https://raw.githubusercontent.com/openebs/maya/master/scripts/install_mayaserver.sh -o install_mayaserver.sh
+curl -sSL https://raw.githubusercontent.com/openebs/maya/master/scripts/start_mayaserver.sh -o start_mayaserver.sh
+
 echo "Fetching consul scripts ..."
 curl -sSL https://raw.githubusercontent.com/openebs/maya/master/scripts/install_consul.sh -o install_consul.sh
 curl -sSL https://raw.githubusercontent.com/openebs/maya/master/scripts/set_consul_as_server.sh -o set_consul_as_server.sh
@@ -53,6 +57,10 @@ sudo chmod 0755 set_nomad_as_server.sh
 
 # Fetch various templates
 cd /etc/maya.d/templates
+
+echo "Fetching mayaserver config templates ..."
+curl -sSL https://raw.githubusercontent.com/openebs/maya/master/templates/mayaserver.service.tmpl -o mayaserver.service.tmpl
+curl -sSL https://raw.githubusercontent.com/openebs/maya/master/templates/nomad_global.INI.tmpl -o nomad_global.INI.tmpl
 
 echo "Fetching consul config templates ..."
 curl -sSL https://raw.githubusercontent.com/openebs/maya/master/templates/consul-server.json.tmpl -o consul-server.json.tmpl
